@@ -79,12 +79,10 @@ export default class ProfilesController {
     public async destroy({request, response}) {
         try {
             // check user input
-            console.log(request);
             const mobile = request.input('mobile');
             if(!mobile) {
                 throw new Error("mobile number is required to delete profile");                
             }
-            console.log(mobile);
             
             // Check profile exists or not
             const profile = await Profile.findBy('mobile', mobile);
