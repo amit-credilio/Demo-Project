@@ -11,7 +11,7 @@ jobs:
         with:
           node-version: '20.x'
       - name: Install Dependencies
-        working-directory: /
+        working-directory: /home/runner/work/Demo-Project/package.json
         run: npm install
       - name: Build the project
         run: node ace build
